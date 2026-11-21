@@ -1,0 +1,67 @@
+================================================================================
+                   SUDOKU SOLVER - EXPECTED OUTPUT SPECIFICATION
+================================================================================
+
+1. PROBLEM TITLE
+----------------
+Classic 9x9 Sudoku Puzzle Solver - Solution Reference
+
+2. OUTPUT FORMAT
+----------------
+- The output consists of exactly 9 lines representing the solved rows.
+- Each line contains 9 cells representing columns from left to right.
+- Every cell value is enclosed in double quotation marks and separated by a space.
+- Each cell contains a solved digit from "1" through "9".
+- All empty cells (".") from the sample input are replaced with solved digits.
+
+3. EXPECTED SOLVED GRID
+-----------------------
+"5" "3" "4" "6" "7" "8" "9" "1" "2"
+"6" "7" "2" "1" "9" "5" "3" "4" "8"
+"1" "9" "8" "3" "4" "2" "5" "6" "7"
+"8" "5" "9" "7" "6" "1" "4" "2" "3"
+"4" "2" "6" "8" "5" "3" "7" "9" "1"
+"7" "1" "3" "9" "2" "4" "8" "5" "6"
+"9" "6" "1" "5" "3" "7" "2" "8" "4"
+"2" "8" "7" "4" "1" "9" "6" "3" "5"
+"3" "4" "5" "2" "8" "6" "1" "7" "9"
+
+4. VERIFICATION AND EXPLANATION
+-------------------------------
+The expected output represents a fully solved, valid Sudoku grid matching the
+puzzle provided in `sample-input.txt`:
+
+  a. Initial Clues Preserved:
+     All 30 original fixed digits provided in `sample-input.txt` remain unaltered
+     in their respective coordinates (e.g., Row 1 Col 1 is "5", Row 2 Col 4 is "1").
+
+  b. Row Validity:
+     Every horizontal row contains all digits from 1 through 9 exactly once, with
+     no duplicate values.
+     - Row 1: {"1", "2", "3", "4", "5", "6", "7", "8", "9"} -> sum = 45
+     - Row 2: {"1", "2", "3", "4", "5", "6", "7", "8", "9"} -> sum = 45
+     - Rows 3-9 similarly satisfy the uniqueness constraint.
+
+  c. Column Validity:
+     Every vertical column contains all digits from 1 through 9 exactly once, with
+     no duplicate values.
+     - Column 1: ["5", "6", "1", "8", "4", "7", "9", "2", "3"] -> unique set 1-9
+     - Columns 2-9 similarly satisfy the uniqueness constraint.
+
+  d. 3x3 Subgrid (Box) Validity:
+     Each of the nine non-overlapping 3x3 blocks contains all digits from 1 through 9
+     without repetition.
+     - Top-Left Box:      ["5", "3", "4", "6", "7", "2", "1", "9", "8"] -> unique set 1-9
+     - Top-Middle Box:    ["6", "7", "8", "1", "9", "5", "3", "4", "2"] -> unique set 1-9
+     - Top-Right Box:     ["9", "1", "2", "3", "4", "8", "5", "6", "7"] -> unique set 1-9
+     - Middle-Left Box:   ["8", "5", "9", "4", "2", "6", "7", "1", "3"] -> unique set 1-9
+     - Center Box:        ["7", "6", "1", "8", "5", "3", "9", "2", "4"] -> unique set 1-9
+     - Middle-Right Box:  ["4", "2", "3", "7", "9", "1", "8", "5", "6"] -> unique set 1-9
+     - Bottom-Left Box:   ["9", "6", "1", "2", "8", "7", "3", "4", "5"] -> unique set 1-9
+     - Bottom-Middle Box: ["5", "3", "7", "4", "1", "9", "2", "8", "6"] -> unique set 1-9
+     - Bottom-Right Box:  ["2", "8", "4", "6", "3", "5", "1", "7", "9"] -> unique set 1-9
+
+Conclusion: Every row, column, and 3x3 subgrid strictly contains digits "1"-"9"
+without omission or repetition, fully satisfying the constraints of the puzzle.
+
+================================================================================

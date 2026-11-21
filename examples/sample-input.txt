@@ -1,0 +1,46 @@
+================================================================================
+                    SUDOKU SOLVER - SAMPLE INPUT SPECIFICATION
+================================================================================
+
+1. PROBLEM TITLE
+----------------
+Classic 9x9 Sudoku Puzzle Solver
+
+2. PROBLEM STATEMENT
+--------------------
+Given an incomplete 9x9 grid where some cells are filled with digits from 1 to 9
+and empty cells are denoted by '.', determine a valid configuration such that
+the puzzle is completely filled and satisfies the fundamental rules of Sudoku:
+  a. Each row must contain the digits 1-9 without repetition.
+  b. Each column must contain the digits 1-9 without repetition.
+  c. Each of the nine 3x3 subgrids (boxes) must contain the digits 1-9 without
+     repetition.
+
+3. INPUT FORMAT
+---------------
+- The input consists of exactly 9 lines representing the rows of the Sudoku board.
+- Each line contains 9 cells representing columns from left to right.
+- Every cell value is enclosed in double quotation marks and separated by a space.
+- Fixed clue values are represented as "1" through "9".
+- Empty cells to be solved are represented as ".".
+
+4. CONSTRAINTS
+--------------
+- Grid Dimensions: Exactly 9 rows and 9 columns (81 cells total).
+- Allowed Tokens: Strictly {"1", "2", "3", "4", "5", "6", "7", "8", "9", "."}.
+- Initial Clues: The given clues form a valid, non-conflicting partial board.
+- Solvability: The puzzle is guaranteed to have a unique and valid solution.
+
+5. SAMPLE INPUT GRID
+--------------------
+"5" "3" "." "." "7" "." "." "." "."
+"6" "." "." "1" "9" "5" "." "." "."
+"." "9" "8" "." "." "." "." "6" "."
+"8" "." "." "." "6" "." "." "." "3"
+"4" "." "." "8" "." "3" "." "." "1"
+"7" "." "." "." "2" "." "." "." "6"
+"." "6" "." "." "." "." "2" "8" "."
+"." "." "." "4" "1" "9" "." "." "5"
+"." "." "." "." "8" "." "." "7" "9"
+
+================================================================================
