@@ -1,7 +1,6 @@
 /**
  * SudokuSolver
  * 
- * A beginner-friendly Java program that solves a 9x9 Sudoku puzzle
  * using the recursive backtracking algorithm.
  */
 public class SudokuSolver {
